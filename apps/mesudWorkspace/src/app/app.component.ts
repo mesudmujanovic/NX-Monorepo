@@ -3,10 +3,13 @@ import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { CategoryService } from '@org/category';
+import { AsyncPipe, JsonPipe } from '@angular/common';
 
 @Component({
   standalone: true,
-  imports: [NxWelcomeComponent, RouterModule, MainNavComponent],
+  imports: [NxWelcomeComponent, RouterModule, MainNavComponent,
+    AsyncPipe, JsonPipe
+  ],
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
@@ -14,5 +17,7 @@ import { CategoryService } from '@org/category';
 export class AppComponent {
   title = 'mesudWorkspace';
 
-  categories = inject(CategoryService);
+  categories = inject(CategoryService).getCategories();
+
+
 }
