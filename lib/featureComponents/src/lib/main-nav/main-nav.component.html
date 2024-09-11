@@ -1,0 +1,19 @@
+<div class="sidenav-container">
+  <nav class="sidenav">
+    <div class="sidenav-header">
+      <h2>Menu</h2>
+    </div>
+    <ul class="sidenav-list">
+      <li><div routerLink="/create" routerLinkActive="active-link" class="sidenav-link">Create</div></li>
+      <li><a routerLink="/delete" routerLinkActive="active-link" class="sidenav-link">Delete</a></li>
+    </ul>
+  </nav>
+  <div class="sidenav-content">
+    <header class="header">
+      <button class="toggle-button" (click)="toggleSidenav()">☰</button>
+      <span>mesudWorkspace</span>
+    </header>
+    <!-- Router Outlet for displaying routed components -->
+    <router-outlet></router-outlet>
+  </div>
+</div>

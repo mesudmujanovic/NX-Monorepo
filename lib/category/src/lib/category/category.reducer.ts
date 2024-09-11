@@ -1,5 +1,5 @@
 import { createReducer, on } from "@ngrx/store";
-import { categoryActionFailure, categoryActions } from "./category.acion";
+import { categoryActionFailure, getCategoriesActions } from "./category.acion";
 
 export interface CategoryState {
   categories: string[];
@@ -15,7 +15,7 @@ error: ''
 
 export const categoryReducer = createReducer(
   initalState,
-  on(categoryActions, (state, action) => {
+  on(getCategoriesActions, (state, action) => {
     return {
       ...state,
       categories: state.categories,
