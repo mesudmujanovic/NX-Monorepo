@@ -1,3 +1,4 @@
+import { AssociationComponent } from './../../../../lib/featureComponents/src/lib/shared/association/create/association.component';
 import { Route } from '@angular/router';
 import { navigationConfig } from './navigation.config';
 
@@ -14,11 +15,15 @@ export const appRoutes: Route[] = [
       children: [
         {
           path: 'create',
-          loadComponent: () => import('lib/featureComponents/src/lib/association/create/association.component').then(m => m.AssociationComponent)
+          loadComponent: () => import('lib/featureComponents/src/lib/shared/association/create/association.component').then(m => m.AssociationComponent)
         },
         {
           path: 'delete',
-          loadComponent: () => import('lib/featureComponents/src/lib/association/delete/association-delete.component').then(m => m.AssociationDeleteComponent)
+          loadComponent: () => import('lib/featureComponents/src/lib/shared/association/delete/association-delete.component').then(m => m.AssociationDeleteComponent)
+        },
+        {
+          path: 'number',
+          loadComponent: () => import('lib/featureComponents/src/lib/shared/my-number/my-number.component').then(m => m.MyNumberComponent)
         }
       ]
     }
