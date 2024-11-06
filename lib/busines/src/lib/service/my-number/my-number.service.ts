@@ -1,7 +1,7 @@
 import { MyNumberI } from '../../../../../domains/src/lib/my-number/interface/my-number-inteface';
 import { HttpClient } from '@angular/common/http';
 import { Inject, Injectable } from '@angular/core';
-import { catchError, Observable, throwError } from 'rxjs';
+import { catchError, Observable, of, tap, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,10 +13,11 @@ export class MyNumberService {
   }
 
   public getAllNumber(): Observable<MyNumberI[]> {
-    return this.http.get<MyNumberI[]>(`${this.environment['MY_NUMBER_ENDPOINT']}/my-numbers`).pipe(
+    return this.http.get<MyNumberI[]>(`http://localhost:8080/number-game/my-numbers`).pipe(
+      tap(data => console.log('Data received from API:', data)), 
       catchError(err => {
         console.error('Error problwm:', err);
-        return throwError(err);
+        return of([]);;
       })
     )
   }

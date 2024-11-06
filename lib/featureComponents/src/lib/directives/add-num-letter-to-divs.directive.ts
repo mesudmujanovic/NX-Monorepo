@@ -15,7 +15,7 @@ export class AddNumLetterToDivsDirective {
   @Input() operationType: 'numbers' | 'letters' = 'numbers';
 
   @HostListener('click') onClick() {
-    let currentContent: any = '' || [];
+    let currentContent: any = "";
     const currentDiv = this.numDivs.toArray()[this.currentDivIndex - 1]?.nativeElement;
 
     const dataSource = this.operationType === 'numbers'

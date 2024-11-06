@@ -5,12 +5,12 @@
       {{ numbers[number - 1] }}
     </div>
     <div class="button-container">
-      <button class="button" appAddNumToDivs [currentDivIndex]="currentDivIndex" [counterButton]="counterButton"
+      <button class="button" libAddNumLetterToDivs [currentDivIndex]="currentDivIndex" [counterButton]="counterButton"
         [numDivs]="numDivs" [containerCalc]="containerCalc">Dodaj brojeve</button>
     </div>
   </div>
   <div *ngIf="(result$ | async) !== undefined" class="result">
     {{ result$ | async }}
   </div>
-  <app-calculator></app-calculator>
 </div>
+<lib-calculator></lib-calculator>

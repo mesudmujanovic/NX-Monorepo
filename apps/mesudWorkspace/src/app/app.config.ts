@@ -6,7 +6,6 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 import { provideHttpClient } from '@angular/common/http';
-import { categoryReducer } from '@org/category';
 
 export const appConfig: ApplicationConfig = {
   providers: [
@@ -15,7 +14,6 @@ export const appConfig: ApplicationConfig = {
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideRouter(appRoutes), provideAnimationsAsync(),
     provideStore({
-      reducers: categoryReducer
     }),
     provideEffects([])
 ],

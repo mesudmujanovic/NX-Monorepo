@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { NxWelcomeComponent } from './nx-welcome.component';
-import { CategoryService } from '@org/category';
 import { AsyncPipe, JsonPipe } from '@angular/common';
 
 @Component({
@@ -15,8 +14,4 @@ import { AsyncPipe, JsonPipe } from '@angular/common';
 })
 export class AppComponent {
   title = 'mesudWorkspace';
-
-  categories = inject(CategoryService).getCategories();
-
-
 }

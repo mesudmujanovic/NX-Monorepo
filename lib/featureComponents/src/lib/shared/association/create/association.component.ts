@@ -2,7 +2,7 @@ import { StorageService } from './../../../../../../busines/src/lib/service/stor
 import { AssociationService } from './../../../../../../busines/src/lib/service/association/index';
 import { ChangeDetectorRef, Component, ElementRef, inject, QueryList, Renderer2, ViewChild, ViewChildren } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { catchError, EMPTY, interval, map, Observable, of, Subject, Subscription, switchMap, takeUntil, tap, timer } from 'rxjs';
+import { catchError, EMPTY, interval, map, of, Subject, Subscription, switchMap, takeUntil, tap, timer } from 'rxjs';
 import { AssociationI, FieldI } from 'lib/domains/src/lib/association/interface';
 import { FormsModule } from '@angular/forms'; // Import FormsModule
 import { Router } from '@angular/router';

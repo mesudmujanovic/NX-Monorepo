@@ -1,4 +1,3 @@
-import { AssociationComponent } from './../../../../lib/featureComponents/src/lib/shared/association/create/association.component';
 import { Route } from '@angular/router';
 import { navigationConfig } from './navigation.config';
 
@@ -7,7 +6,7 @@ const appTitle: string = 'Agreement Management';
 export const appRoutes: Route[] = [
     {
       path: '',
-      loadComponent: () => import('@org/featureComponents').then((m) => m.MainNavComponent),
+      loadComponent: () => import('@org/featureComponents').then((m) => m.LayoutComponent),
       data: {
         appTitle: appTitle,
         mainNavigation: navigationConfig

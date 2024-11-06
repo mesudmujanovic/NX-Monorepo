@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { NumberLetterStateService } from 'lib/busines/src/lib/service/number-letter';
 import { Observable } from 'rxjs';
 import { CalculatorComponent } from '../calculator/calculator.component';
+import { AddNumLetterToDivsDirective } from '../../directives/add-num-letter-to-divs.directive';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 @Component({
   selector: 'lib-my-number',
   standalone: true,
-  imports: [CommonModule, CalculatorComponent],
+  imports: [CommonModule, CalculatorComponent, AddNumLetterToDivsDirective],
   templateUrl: './my-number.component.html',
   styleUrl: './my-number.component.scss',
 })
